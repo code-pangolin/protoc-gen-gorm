@@ -1592,16 +1592,16 @@ func (b *ORMBuilder) generateDefaultHandlers(file *protogen.File, g *protogen.Ge
 			ormable := b.getOrmable(typeName)
 
 			if b.hasPrimaryKey(ormable) {
-				b.generateReadHandler(message, g)
+				// b.generateReadHandler(message, g)
 				b.generateDeleteHandler(message, g)
 				b.generateDeleteSetHandler(message, g)
 				b.generateStrictUpdateHandler(message, g)
-				b.generatePatchHandler(message, g)
-				b.generatePatchSetHandler(message, g)
+				// b.generatePatchHandler(message, g)
+				// b.generatePatchSetHandler(message, g)
 			}
 
 			b.generateApplyFieldMask(message, g)
-			b.generateListHandler(message, g)
+			// b.generateListHandler(message, g)
 		}
 	}
 }
